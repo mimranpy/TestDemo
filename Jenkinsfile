@@ -1,4 +1,4 @@
-flag = true
+
 pipeline {
  agent any
  enviroment {
