@@ -8,7 +8,7 @@ maven 'Maven'
  stage('Build') {
  steps {
  echo 'Building..'
- bat "nvm install"
+ sh "nvm install"
  // Here you can define commands for your build
  }
  }
