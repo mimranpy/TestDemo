@@ -10,7 +10,7 @@ booleanParam(name:'executeTests', defaultValue: true, description:'')}
  stage('Build') {
  steps {
  echo 'Building..'
- sh "nvm install"
+
  // Here you can define commands for your build
  }
  }
