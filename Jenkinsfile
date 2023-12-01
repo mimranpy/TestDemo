@@ -1,3 +1,4 @@
+flag = true
 pipeline {
  agent any
  stages {
@@ -15,6 +16,11 @@ pipeline {
  }
  stage('Deploy') {
  steps {
+  when{
+   expression {
+    flag == flase
+   }
+  }
  echo 'Deploying....'
  // Here you can define commands for your deployment
  }
