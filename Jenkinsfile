@@ -1,10 +1,14 @@
 flag = true
 pipeline {
  agent any
+ enviroment {
+NEW_VERSION ='1.3.0'
+ }
  stages {
  stage('Build') {
  steps {
  echo 'Building..'
+ echo "Building version ${NEW_VERSION}"
  // Here you can define commands for your build
  }
  }
@@ -16,11 +20,7 @@ pipeline {
  }
  stage('Deploy') {
  steps {
-  when{
-   expression {
-    flag == flase
-   }
-  }
+  
  echo 'Deploying....'
  // Here you can define commands for your deployment
  }
